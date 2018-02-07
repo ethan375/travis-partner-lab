@@ -1,0 +1,1 @@
+INSERT INTO chakras (name, color, size) VALUES ('root', 'red', 2)

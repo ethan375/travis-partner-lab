@@ -3,6 +3,10 @@ class ApplicationController < Sinatra::Base
   require 'bundler' 
   Bundler.require()
 
+  get '/' do 
+    redirect '/chakras'
+  end 
+
   register Sinatra::CrossOrigin
 
   configure do 

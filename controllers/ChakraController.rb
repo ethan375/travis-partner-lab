@@ -1,8 +1,9 @@
 class ChakraController < ApplicationController
 
   get '/' do 
-    @chakra = Chakra.all
-    @chakra.to_json
+    @chakras = Chakra.all
+    p @chakras
+    @chakras.to_json
   end 
 
   post '/' do 

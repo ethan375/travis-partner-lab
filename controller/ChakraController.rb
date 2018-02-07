@@ -1,6 +1,0 @@
-class ChakraController < ApplicationController
-
-  
-
-
-end 

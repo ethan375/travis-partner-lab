@@ -1,4 +1,4 @@
-class ApplicationController < Sinatra::base 
+class ApplicationController < Sinatra::Base 
 
   require 'bundler' 
   Bundler.require()

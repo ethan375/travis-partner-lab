@@ -3,14 +3,11 @@ class ApplicationController < Sinatra::Base
   require 'bundler' 
   Bundler.require()
 
-  get '/' do 
-    redirect '/chakras'
-  end 
 
   register Sinatra::CrossOrigin
 
   configure do 
-    cross_origin
+    enable :cross_origin
   end 
 
   set :allow_origin, :any
@@ -23,8 +20,12 @@ class ApplicationController < Sinatra::Base
   )
 
   options "*" do 
-    response.headers["Allow"] ="HEAD, GET, PUT, POST, DELTE, OPTIONS"
+    response.headers["Allow"] ="HEAD, GET, PUT, POST, DELETE, OPTIONS"
     response.headers["Access-Control-Allow-Headers"] ="X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
+  end 
+
+  get '/' do
+    redirect '/chakras'
   end 
 
 end 

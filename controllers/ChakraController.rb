@@ -18,7 +18,11 @@ class ChakraController < ApplicationController
 
   get '/:id' do 
     @chakra = Chakra.find params[:id]
+    @chakra
   end 
+
+  delete '/:id' do 
+    @chakra = Chakra.find params[:id]
 
 
 end 

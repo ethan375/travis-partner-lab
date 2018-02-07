@@ -1,4 +1,5 @@
-CREATE TABLE chakra;
+
+CREATE DATABASE chakra;
 
 \c chakra
 
